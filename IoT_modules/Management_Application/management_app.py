@@ -27,10 +27,10 @@ class ManagementApp(QDialog):
         # LEFT BOX
         self.leftGroupBox = QGroupBox("Users")
         self.userTableWidget = QTableWidget(0, 3)
-        layout = QVBoxLayout()
-        layout.addWidget(self.userTableWidget)
-        layout.addStretch(1)
-        self.leftGroupBox.setLayout(layout)
+        leftLayout = QVBoxLayout()
+        leftLayout.addWidget(self.userTableWidget)
+        leftLayout.addStretch(1)
+        self.leftGroupBox.setLayout(leftLayout)
 
         # RIGHT BOX
         self.rightGroupBox = QGroupBox("New User")
@@ -55,20 +55,20 @@ class ManagementApp(QDialog):
         self.temperatureDial.setValue(20)
         self.temperatureDial.setNotchesVisible(True)
         self.temperatureDial.valueChanged.connect(temperatureLCDNumber.display)
-        layout = QVBoxLayout()
         temperatureTitleLayout = QHBoxLayout()
         temperatureTitleLayout.addWidget(temperatureLabel)
         temperatureTitleLayout.addWidget(temperatureCelsius)
         temperatureLayout = QHBoxLayout()
         temperatureLayout.addWidget(self.temperatureDial)
         temperatureLayout.addWidget(temperatureLCDNumber)
-        layout.addWidget(self.newUserLineEdit)
-        layout.addLayout(temperatureTitleLayout)
-        layout.addLayout(temperatureLayout)
-        layout.addWidget(addUserPushButton)
-        layout.addWidget(deleteUserPushButton)
-        layout.addStretch(1)
-        self.rightGroupBox.setLayout(layout)
+        rightLayout = QVBoxLayout()
+        rightLayout.addWidget(self.newUserLineEdit)
+        rightLayout.addLayout(temperatureTitleLayout)
+        rightLayout.addLayout(temperatureLayout)
+        rightLayout.addWidget(addUserPushButton)
+        rightLayout.addWidget(deleteUserPushButton)
+        rightLayout.addStretch(1)
+        self.rightGroupBox.setLayout(rightLayout)
 
         # MAIN UI
         mainLayout = QGridLayout()
@@ -125,8 +125,6 @@ class ManagementApp(QDialog):
 
 
 if __name__ == '__main__':
-    import sys
-
     app = QApplication(sys.argv)
     managementApp = ManagementApp()
     managementApp.show()
