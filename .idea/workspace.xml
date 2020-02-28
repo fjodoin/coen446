@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1480b877-cc32-4b16-853c-b23420da255e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YRZpBGFjimZchiK7mmFDK87PCZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582911141097">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1582911141097" />
+    <state width="1830" height="288" key="GridCell.Tab.0.bottom" timestamp="1582910352383">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="288" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1582910352383" />
+    <state width="1830" height="288" key="GridCell.Tab.0.center" timestamp="1582910352382">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="288" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1582910352382" />
+    <state width="1830" height="288" key="GridCell.Tab.0.left" timestamp="1582910352381">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="288" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1582910352381" />
+    <state width="1830" height="288" key="GridCell.Tab.0.right" timestamp="1582910352382">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="288" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1582910352382" />
+    <state width="1830" height="355" key="GridCell.Tab.1.bottom" timestamp="1582909392739">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="355" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1582909392739" />
+    <state width="1830" height="355" key="GridCell.Tab.1.center" timestamp="1582909392739">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="355" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1582909392739" />
+    <state width="1830" height="355" key="GridCell.Tab.1.left" timestamp="1582909392739">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="355" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1582909392739" />
+    <state width="1830" height="355" key="GridCell.Tab.1.right" timestamp="1582909392739">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="355" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1582909392739" />
+    <state x="482" y="187" key="SettingsEditor" timestamp="1582907568556">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1582907568556" />
+  </component>
+</project>
