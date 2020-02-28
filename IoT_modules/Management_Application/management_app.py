@@ -55,13 +55,13 @@ class ManagementApp(QDialog):
         self.temperatureDial.setValue(20)
         self.temperatureDial.setNotchesVisible(True)
         self.temperatureDial.valueChanged.connect(temperatureLCDNumber.display)
-        rightLayout = QVBoxLayout()
         temperatureTitleLayout = QHBoxLayout()
         temperatureTitleLayout.addWidget(temperatureLabel)
         temperatureTitleLayout.addWidget(temperatureCelsius)
         temperatureLayout = QHBoxLayout()
         temperatureLayout.addWidget(self.temperatureDial)
         temperatureLayout.addWidget(temperatureLCDNumber)
+        rightLayout = QVBoxLayout()
         rightLayout.addWidget(self.newUserLineEdit)
         rightLayout.addLayout(temperatureTitleLayout)
         rightLayout.addLayout(temperatureLayout)
@@ -125,8 +125,6 @@ class ManagementApp(QDialog):
 
 
 if __name__ == '__main__':
-    import sys
-
     app = QApplication(sys.argv)
     managementApp = ManagementApp()
     managementApp.show()
