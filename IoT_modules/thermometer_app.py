@@ -90,8 +90,6 @@ class ThermometerApp(QDialog):
 
 
 if __name__ == '__main__':
-    
-
     app = QApplication(sys.argv)
     thermometerApp = ThermometerApp()
     thermometerApp.show()
