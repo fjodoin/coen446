@@ -16,6 +16,9 @@ class ThermometerApp(QDialog):
 
     def __init__(self, parent = None):
         temp = 15
+        first_user = "VACANT    "
+        time_stamp = ""
+
 
         super(ThermometerApp, self).__init__(parent)
 
@@ -28,7 +31,7 @@ class ThermometerApp(QDialog):
         self.rightGroupBox.setAlignment(Qt.AlignCenter)
         self.firstUser = QLabel()
         self.firstUser.setAlignment(Qt.AlignCenter)
-        self.firstUser.setText("VACANT")
+        self.firstUser.setText( first_user+time_stamp)
         temperatureFont = QFont("Helvatica", 8)
         temperatureLabel = QLabel("Select Temperature")
         temperatureLabel.setAlignment(Qt.AlignCenter)
