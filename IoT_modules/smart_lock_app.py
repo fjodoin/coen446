@@ -7,22 +7,33 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 import sys
+import threading
+import socket
+import json
+
+
+HEADER_LENGTH = 10
+HOST, PORT = "localhost", 9999
+
+
+def create_packet(payload):
+    encoded_payload = payload.encode("utf-8")
+    encoded_payload_header = f"{len(encoded_payload):<{HEADER_LENGTH}}".encode("utf-8")
+    return encoded_payload_header, encoded_payload
 
 
 class SmartLockApp(QDialog):
     """
     TODO
     """
-
-    def __init__(self, parent=None):
+    def __init__(self, sock, parent=None):
         """
         TODO
         :param parent:
         """
+        self.sock = sock
         super(SmartLockApp, self).__init__(parent)
-
         self.resize(700, 100)
-
         self.originalPalette = QApplication.palette()
 
         # LEFT BOX
@@ -77,6 +88,13 @@ class SmartLockApp(QDialog):
             self.messageTextEdit.setText(message)
             self.messageTextEdit.setFont(messageFont)
             self.userLineEdit.setText("")
+            payload_dict = {
+                "device": "smart_lock",
+                "action": "ENTERING",
+                "user": user
+            }
+            encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
+            self.sock.sendall(encoded_payload_header + encoded_payload)
         else:
             self.userLineEdit.setText("")
 
@@ -92,6 +110,13 @@ class SmartLockApp(QDialog):
             self.messageTextEdit.setText(message)
             self.messageTextEdit.setFont(messageFont)
             self.userLineEdit.setText("")
+            payload_dict = {
+                "device": "smart_lock",
+                "action": "LEAVING",
+                "user": user
+            }
+            encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
+            self.sock.sendall(encoded_payload_header + encoded_payload)
         else:
             self.userLineEdit.setText("")
 
@@ -114,7 +139,11 @@ class SmartLockApp(QDialog):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    smartLockApp = SmartLockApp()
+# Create a socket (SOCK_STREAM means a TCP socket)
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+    # Connect to server and send data
+    sock.connect((HOST, PORT))
+    smartLockApp = SmartLockApp(sock)
     smartLockApp.show()
     sys.exit(app.exec_())
 
