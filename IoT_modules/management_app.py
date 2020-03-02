@@ -33,12 +33,12 @@ class ManagementApp(QDialog):
         """
         self.sock = sock
         super(ManagementApp, self).__init__(parent)
-        self.resize(700, 100)
+        self.resize(500, 100)
         self.originalPalette = QApplication.palette()
 
         # LEFT BOX
         self.leftGroupBox = QGroupBox("Users")
-        self.userTableWidget = QTableWidget(0, 3)
+        self.userTableWidget = QTableWidget(0, 2)
         layout = QVBoxLayout()
         layout.addWidget(self.userTableWidget)
         layout.addStretch(1)
@@ -104,10 +104,8 @@ class ManagementApp(QDialog):
             self.userTableWidget.insertRow(self.userTableWidget.rowCount())
             newUserName = QTableWidgetItem(self.newUserLineEdit.text())
             newUserTemp = QTableWidgetItem(str(self.temperatureDial.value()))
-            newUserStatus = QTableWidgetItem("NEW")
             self.userTableWidget.setItem(self.userTableWidget.rowCount() - 1, 0, newUserName)
             self.userTableWidget.setItem(self.userTableWidget.rowCount() - 1, 1, newUserTemp)
-            self.userTableWidget.setItem(self.userTableWidget.rowCount() - 1, 2, newUserStatus)
             payload_dict = {
                 "device": "management_app",
                 "action": "ADD_NEW_USER",

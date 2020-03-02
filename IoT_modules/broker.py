@@ -46,7 +46,6 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
             encoded_payload_header, encoded_payload = create_packet(self.data)
             # just send back the same data, but upper-cased
             self.request.sendall(encoded_payload_header + encoded_payload)
-            print("SEND")
 
 if __name__ == "__main__":
     HOST, PORT = "localhost", 9999
