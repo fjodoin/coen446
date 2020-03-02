@@ -7,21 +7,33 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 import sys
+import threading
+import socket
+import json
+
+
+HEADER_LENGTH = 10
+HOST, PORT = "localhost", 9999
+
+
+def create_packet(payload):
+    encoded_payload = payload.encode("utf-8")
+    encoded_payload_header = f"{len(encoded_payload):<{HEADER_LENGTH}}".encode("utf-8")
+    return encoded_payload_header, encoded_payload
 
 
 class ManagementApp(QDialog):
     """
 
     """
-    def __init__(self, parent=None):
+    def __init__(self, sock, parent=None):
         """
 
         :param parent:
         """
+        self.sock = sock
         super(ManagementApp, self).__init__(parent)
-
         self.resize(700, 100)
-
         self.originalPalette = QApplication.palette()
 
         # LEFT BOX
@@ -87,17 +99,26 @@ class ManagementApp(QDialog):
 
         :return:
         """
-        if self.newUserLineEdit.text() == "":
-            self.newUserLineEdit.setPlaceholderText("Enter Username")
-        else:
+        user = self.newUserLineEdit.text()
+        if len(user) > 0:
             self.userTableWidget.insertRow(self.userTableWidget.rowCount())
             newUserName = QTableWidgetItem(self.newUserLineEdit.text())
             newUserTemp = QTableWidgetItem(str(self.temperatureDial.value()))
-            newUserStatus = QTableWidgetItem("Connected")
+            newUserStatus = QTableWidgetItem("NEW")
             self.userTableWidget.setItem(self.userTableWidget.rowCount() - 1, 0, newUserName)
             self.userTableWidget.setItem(self.userTableWidget.rowCount() - 1, 1, newUserTemp)
             self.userTableWidget.setItem(self.userTableWidget.rowCount() - 1, 2, newUserStatus)
+            payload_dict = {
+                "device": "management_app",
+                "action": "ADD_NEW_USER",
+                "user_info": [self.newUserLineEdit.text(), str(self.temperatureDial.value()), "NEW"]
+            }
+            encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
+            self.sock.sendall(encoded_payload_header + encoded_payload)
             self.newUserLineEdit.setText("")
+        else:
+            self.newUserLineEdit.setText("")
+
 
     def deleteUser(self):
         """
@@ -105,7 +126,16 @@ class ManagementApp(QDialog):
         :return:
         """
         if self.userTableWidget.rowCount() > 0:
+            deleted_user_row = self.userTableWidget.selectedItems()[0]
+            deleted_user = self.userTableWidget.item(deleted_user_row.row(), 0).data(0)
             self.userTableWidget.removeRow(self.userTableWidget.row(self.userTableWidget.selectedItems()[0]))
+            payload_dict = {
+                "device": "management_app",
+                "action": "DELETE_USER",
+                "user_info": deleted_user
+            }
+            encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
+            self.sock.sendall(encoded_payload_header + encoded_payload)
 
     def changeStyle(self, styleName):
         """
@@ -126,6 +156,10 @@ class ManagementApp(QDialog):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    managementApp = ManagementApp()
+# Create a socket (SOCK_STREAM means a TCP socket)
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+    # Connect to server and send data
+    sock.connect((HOST, PORT))
+    managementApp = ManagementApp(sock)
     managementApp.show()
     sys.exit(app.exec_())
