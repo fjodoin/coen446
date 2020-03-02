@@ -43,8 +43,10 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
             print("{} wrote:".format(self.client_address[0] + ":" + str(self.client_address[1])))
             print(self.data)
             
+            encoded_payload_header, encoded_payload = create_packet(self.data)
             # just send back the same data, but upper-cased
-            self.request.sendall(self.data.upper().encode("utf-8"))
+            self.request.sendall(encoded_payload_header + encoded_payload)
+            print("SEND")
 
 if __name__ == "__main__":
     HOST, PORT = "localhost", 9999
