@@ -10,7 +10,7 @@ import sys
 import threading
 import socket
 import json
-from datetime import datetime
+import datetime
 import time
 
 
@@ -22,6 +22,15 @@ def create_packet(payload):
     encoded_payload = payload.encode("utf-8")
     encoded_payload_header = f"{len(encoded_payload):<{HEADER_LENGTH}}".encode("utf-8")
     return encoded_payload_header, encoded_payload
+
+def syn_ack(sock, device_name):
+    payload_dict = {
+                "device": device_name,
+                "action": "SYN_ACK"
+            }
+    encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
+    sock.sendall(encoded_payload_header + encoded_payload)
+
 
 # Listen Thread
 class ListenThread(threading.Thread):
@@ -39,7 +48,7 @@ class ListenThread(threading.Thread):
             print("PACKET RECEIVED")
             payload_string = self.sock.recv(payload_header).decode("utf-8")
             payload_dict = json.loads(payload_string)
-            time_stamp = str(datetime.timestamp(datetime.now()))
+            time_stamp = str(datetime.datetime.now())[:19]
             self.temperatureDial.setValue(int(payload_dict['temperature']))
             self.recentUser.setText(payload_dict['user'] + " @ " + time_stamp)
 
@@ -74,9 +83,10 @@ class ThermometerApp(QDialog):
         TODO
         """
         self.sock = sock
+        syn_ack(self.sock, "thermometer_app")
         temp = 15
-        first_user = "VACANT    "
-        time_stamp = str(datetime.now())
+        first_user = "VACANT"
+        time_stamp = str(datetime.datetime.now())[:19]
         super(ThermometerApp, self).__init__(parent)
         self.resize(300, 150)
         self.originalPalette = QApplication.palette()

@@ -21,6 +21,14 @@ def create_packet(payload):
     encoded_payload_header = f"{len(encoded_payload):<{HEADER_LENGTH}}".encode("utf-8")
     return encoded_payload_header, encoded_payload
 
+def syn_ack(sock, device_name):
+    payload_dict = {
+        "device": device_name,
+        "action": "SYN_ACK"
+    }
+    encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
+    sock.sendall(encoded_payload_header + encoded_payload)
+
 
 class ManagementApp(QDialog):
     """
@@ -32,6 +40,8 @@ class ManagementApp(QDialog):
         :param parent:
         """
         self.sock = sock
+        syn_ack(self.sock, "management_app")
+
         super(ManagementApp, self).__init__(parent)
         self.resize(500, 100)
         self.originalPalette = QApplication.palette()
@@ -109,7 +119,7 @@ class ManagementApp(QDialog):
             payload_dict = {
                 "device": "management_app",
                 "action": "ADD_NEW_USER",
-                "user_info": [self.newUserLineEdit.text(), str(self.temperatureDial.value()), "NEW"]
+                "user_info": [self.newUserLineEdit.text(), str(self.temperatureDial.value())]
             }
             encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
             self.sock.sendall(encoded_payload_header + encoded_payload)
@@ -130,7 +140,7 @@ class ManagementApp(QDialog):
             payload_dict = {
                 "device": "management_app",
                 "action": "DELETE_USER",
-                "user_info": deleted_user
+                "user_info": [deleted_user]
             }
             encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
             self.sock.sendall(encoded_payload_header + encoded_payload)

@@ -1,0 +1,395 @@
+03/03/2020 01:04:43 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 60176], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"asd\"}"]}
+03/03/2020 01:06:07 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 60356], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"test\"}"]}
+03/03/2020 01:07:55 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 60564], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"test\"}"]}
+03/03/2020 01:09:28 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 60764], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"test\"}"]}
+03/03/2020 01:12:12 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 32858], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"test\"}"]}
+03/03/2020 01:14:37 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 33156], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"test\"}"]}
+03/03/2020 01:18:10 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 33590], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test1\"}"]}
+03/03/2020 01:18:15 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 33590], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test2\"}"]}
+03/03/2020 01:18:42 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 33662], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test1\"}"]}
+03/03/2020 01:18:45 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 33662], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test2\"}"]}
+03/03/2020 01:19:35 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 33760], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test1\"}"]}
+03/03/2020 01:19:36 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 33760], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test2\"}"]}
+03/03/2020 01:19:36 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 33760], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test2\"}"]}
+03/03/2020 01:19:42 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 33760], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test3\"}"]}
+03/03/2020 01:19:42 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 33760], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test3\"}"]}
+03/03/2020 01:19:45 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 33760], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test4\"}"]}
+03/03/2020 01:19:45 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 33760], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test4\"}"]}
+03/03/2020 01:19:59 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 33760], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Testb\"}"]}
+03/03/2020 01:19:59 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 33760], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Testb\"}"]}
+03/03/2020 01:25:30 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 34490], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test\"}"]}
+03/03/2020 01:25:39 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 34490], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test2\"}"]}
+03/03/2020 01:25:39 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 34490], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test2\"}"]}
+03/03/2020 01:43:37 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 36682], {"device": "smart_lock", "action": "ENTERING", "user": "Test1", "device_address": ["127.0.0.1", 36682]}]}
+03/03/2020 01:43:48 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 36682], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test2\"}"]}
+03/03/2020 01:44:50 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 36828], {"device": "smart_lock", "action": "ENTERING", "user": "test1", "device_address": ["127.0.0.1", 36828]}]}
+03/03/2020 01:45:10 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 36828], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"test2\"}"]}
+03/03/2020 01:45:10 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 36828], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"test2\"}"]}
+03/03/2020 01:58:42 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 38392], {"device": "smart_lock", "action": "ENTERING", "user": "asd", "device_address": ["127.0.0.1", 38392]}]}
+03/03/2020 02:01:11 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 38752], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 38752]}]}
+03/03/2020 02:01:28 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 38786], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 38786]}]}
+03/03/2020 02:01:45 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"tst1\"}"]}
+03/03/2020 02:01:45 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"tst1\"}"]}
+03/03/2020 02:01:47 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"tetst2\"}"]}
+03/03/2020 02:01:47 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"tetst2\"}"]}
+03/03/2020 02:01:50 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"tetetst455\"}"]}
+03/03/2020 02:01:50 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"tetetst455\"}"]}
+03/03/2020 02:01:57 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"dasasdsa\"}"]}
+03/03/2020 02:01:57 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"dasasdsa\"}"]}
+03/03/2020 02:01:59 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"dasdasdsa\"}"]}
+03/03/2020 02:01:59 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"dasdasdsa\"}"]}
+03/03/2020 02:02:01 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"asdasdas\"}"]}
+03/03/2020 02:02:01 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"asdasdas\"}"]}
+03/03/2020 02:02:02 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"asdad\"}"]}
+03/03/2020 02:02:02 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 38786], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"asdad\"}"]}
+03/03/2020 02:04:44 PM - DEBUG: {"tag": "Update Existing Connection", "data": [["127.0.0.1", 39120], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 39120]}]}
+03/03/2020 02:04:48 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 39120], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"ASA\"}"]}
+03/03/2020 02:04:48 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 39120], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"ASA\"}"]}
+03/03/2020 02:04:50 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 39120], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"asdasd\"}"]}
+03/03/2020 02:04:50 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 39120], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"asdasd\"}"]}
+03/03/2020 02:09:13 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 39664], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 39664]}]}
+03/03/2020 02:09:17 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 39664], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test\"}"]}
+03/03/2020 02:09:17 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 39664], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test\"}"]}
+03/03/2020 02:09:18 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 39664], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"Test\"}"]}
+03/03/2020 02:09:18 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 39664], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"Test\"}"]}
+03/03/2020 02:09:20 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 39664], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test\"}"]}
+03/03/2020 02:09:20 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 39664], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Test\"}"]}
+03/03/2020 02:13:02 PM - DEBUG: {"tag": "Update Existing Connection", "data": [["127.0.0.1", 40136], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 40136]}]}
+03/03/2020 02:13:05 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 40136], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"asd\"}"]}
+03/03/2020 02:13:05 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 40136], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"asd\"}"]}
+03/03/2020 02:26:12 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 41926], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 41926]}]}
+03/03/2020 02:26:16 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 41926], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a1\"}"]}
+03/03/2020 02:27:39 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 42102], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 42102]}]}
+03/03/2020 02:27:41 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42102], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a1\"}"]}
+03/03/2020 02:27:41 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42102], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a1\"}"]}
+03/03/2020 02:27:46 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42102], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a2\"}"]}
+03/03/2020 02:27:46 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42102], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a2\"}"]}
+03/03/2020 02:28:53 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 42250], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 42250]}]}
+03/03/2020 02:28:57 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42250], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a1\"}"]}
+03/03/2020 02:28:57 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42250], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a1\"}"]}
+03/03/2020 02:30:29 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 42360], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 42360]}]}
+03/03/2020 02:30:32 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42360], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a1\"}"]}
+03/03/2020 02:30:32 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42360], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a1\"}"]}
+03/03/2020 02:31:12 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 42420], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 42420]}]}
+03/03/2020 02:31:14 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42420], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a1\"}"]}
+03/03/2020 02:31:14 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42420], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a1\"}"]}
+03/03/2020 02:31:31 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 42448], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 42448]}]}
+03/03/2020 02:31:35 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a1\"}"]}
+03/03/2020 02:31:35 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a1\"}"]}
+03/03/2020 02:31:39 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a2\"}"]}
+03/03/2020 02:31:39 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a2\"}"]}
+03/03/2020 02:31:55 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"a1\"}"]}
+03/03/2020 02:31:55 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"a1\"}"]}
+03/03/2020 02:32:07 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a3\"}"]}
+03/03/2020 02:32:07 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a3\"}"]}
+03/03/2020 02:32:09 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a5\"}"]}
+03/03/2020 02:32:09 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a5\"}"]}
+03/03/2020 02:32:11 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a6\"}"]}
+03/03/2020 02:32:11 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"a6\"}"]}
+03/03/2020 02:32:26 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"a3\"}"]}
+03/03/2020 02:32:26 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 42448], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"a3\"}"]}
+03/03/2020 02:38:13 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 43260], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 43260]}]}
+03/03/2020 02:38:15 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:38:15 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:38:19 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:38:19 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:38:22 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:38:22 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:38:27 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:38:27 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:38:33 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:38:33 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:38:56 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:38:56 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:39:01 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:39:01 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43260], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:39:55 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 43468], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 43468]}]}
+03/03/2020 02:39:58 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:39:58 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:40:00 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:40:00 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:40:03 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:40:03 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:40:09 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:40:09 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:40:14 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:40:14 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:40:29 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A1\"}"]}
+03/03/2020 02:40:29 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 43468], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A1\"}"]}
+03/03/2020 02:53:01 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 44980], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 44980]}]}
+03/03/2020 02:53:05 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:53:05 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:53:11 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:53:11 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:53:21 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:53:21 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:53:29 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:53:29 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:53:36 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:53:36 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:53:41 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:53:41 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 44980], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:55:14 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 45240], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 45240]}]}
+03/03/2020 02:55:16 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45240], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:55:16 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45240], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:55:18 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45240], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:55:18 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45240], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:55:19 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45240], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:55:19 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45240], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:55:23 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45240], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:55:23 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45240], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:56:11 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 45352], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 45352]}]}
+03/03/2020 02:56:13 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:56:13 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:56:18 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:56:18 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:56:25 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:56:25 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:56:34 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A4\"}"]}
+03/03/2020 02:56:34 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A4\"}"]}
+03/03/2020 02:56:40 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A1\"}"]}
+03/03/2020 02:56:40 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A1\"}"]}
+03/03/2020 02:57:46 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A5\"}"]}
+03/03/2020 02:57:46 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A5\"}"]}
+03/03/2020 02:57:48 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A6\"}"]}
+03/03/2020 02:57:48 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A6\"}"]}
+03/03/2020 02:57:53 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A5\"}"]}
+03/03/2020 02:57:53 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45352], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A5\"}"]}
+03/03/2020 02:58:25 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 45626], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 45626]}]}
+03/03/2020 02:58:27 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45626], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:58:27 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45626], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:58:29 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45626], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:58:29 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45626], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:58:30 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45626], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:58:30 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45626], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:58:33 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45626], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:59:08 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 45714], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 45714]}]}
+03/03/2020 02:59:10 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45714], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:59:10 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45714], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:59:11 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45714], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:59:11 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45714], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:59:14 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45714], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:59:27 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 45752], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 45752]}]}
+03/03/2020 02:59:29 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:59:29 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 02:59:30 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:59:30 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 02:59:32 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:59:32 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 02:59:47 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A1\"}"]}
+03/03/2020 02:59:47 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A1\"}"]}
+03/03/2020 02:59:51 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:59:51 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 02:59:53 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A4\"}"]}
+03/03/2020 02:59:53 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A4\"}"]}
+03/03/2020 02:59:56 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A5\"}"]}
+03/03/2020 02:59:56 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A5\"}"]}
+03/03/2020 03:00:03 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A5\"}"]}
+03/03/2020 03:00:03 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45752], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A5\"}"]}
+03/03/2020 03:00:54 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 45926], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 45926]}]}
+03/03/2020 03:00:56 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45926], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:00:56 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45926], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:00:57 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45926], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 03:00:57 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45926], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 03:00:59 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45926], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 03:00:59 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45926], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A3\"}"]}
+03/03/2020 03:01:01 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45926], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A3\"}"]}
+03/03/2020 03:01:01 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45926], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A3\"}"]}
+03/03/2020 03:01:21 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 45978], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 45978]}]}
+03/03/2020 03:01:22 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45978], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:01:22 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45978], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:01:23 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45978], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 03:01:23 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45978], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 03:01:26 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 45978], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 03:01:26 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 45978], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 03:03:26 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 46226], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 46226]}]}
+03/03/2020 03:03:31 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46226], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:03:31 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46226], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:03:36 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46226], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 03:03:36 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46226], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 03:03:39 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46226], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 03:03:59 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 46296], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 46296]}]}
+03/03/2020 03:04:01 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46296], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:04:01 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46296], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:04:03 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46296], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 03:04:03 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46296], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 03:04:05 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46296], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 03:04:05 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46296], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A2\"}"]}
+03/03/2020 03:04:09 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46296], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A1\"}"]}
+03/03/2020 03:04:09 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46296], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"A1\"}"]}
+03/03/2020 03:04:50 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 46398], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 46398]}]}
+03/03/2020 03:04:53 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46398], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:04:53 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46398], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:04:54 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46398], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 03:04:54 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46398], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A2\"}"]}
+03/03/2020 03:04:57 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46398], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:04:57 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46398], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"A1\"}"]}
+03/03/2020 03:08:24 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 46830], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 46830]}]}
+03/03/2020 03:08:27 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46830], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"A1\", \"20\", \"NEW\"]}"]}
+03/03/2020 03:08:27 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46830], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"A1\", \"20\", \"NEW\"]}"]}
+03/03/2020 03:08:31 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46830], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"A2\", \"20\", \"NEW\"]}"]}
+03/03/2020 03:08:31 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46830], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"A2\", \"20\", \"NEW\"]}"]}
+03/03/2020 03:08:32 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46830], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": \"A2\"}"]}
+03/03/2020 03:08:32 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46830], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": \"A2\"}"]}
+03/03/2020 03:08:34 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 46830], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": \"A1\"}"]}
+03/03/2020 03:08:34 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 46830], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": \"A1\"}"]}
+03/03/2020 03:09:51 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 47004], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 47004]}]}
+03/03/2020 03:09:54 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 47004], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\", \"NEW\"]}"]}
+03/03/2020 03:09:54 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 47004], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\", \"NEW\"]}"]}
+03/03/2020 03:09:58 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 47004], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T2\", \"20\", \"NEW\"]}"]}
+03/03/2020 03:09:58 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 47004], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T2\", \"20\", \"NEW\"]}"]}
+03/03/2020 03:10:59 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 47142], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 47142]}]}
+03/03/2020 03:11:02 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 47142], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:11:02 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 47142], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:11:12 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 47142], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": \"T1\"}"]}
+03/03/2020 03:11:12 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 47142], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": \"T1\"}"]}
+03/03/2020 03:15:04 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 47654], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 47654]}]}
+03/03/2020 03:15:07 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 47654], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:15:07 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 47654], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:15:12 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 47654], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T2\", \"20\"]}"]}
+03/03/2020 03:15:12 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 47654], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T2\", \"20\"]}"]}
+03/03/2020 03:16:49 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 47868], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 47868]}]}
+03/03/2020 03:16:52 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 47868], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:16:52 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 47868], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:16:55 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 47868], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": \"T1\"}"]}
+03/03/2020 03:17:42 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 47974], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 47974]}]}
+03/03/2020 03:17:45 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 47974], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:17:45 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 47974], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:17:46 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 47974], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": \"T1\"}"]}
+03/03/2020 03:18:32 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 48070], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 48070]}]}
+03/03/2020 03:18:35 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48070], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:18:35 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48070], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:18:36 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48070], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:18:36 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48070], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:18:43 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48070], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T2\", \"20\"]}"]}
+03/03/2020 03:18:43 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48070], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T2\", \"20\"]}"]}
+03/03/2020 03:18:44 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48070], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T3\", \"20\"]}"]}
+03/03/2020 03:18:44 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48070], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T3\", \"20\"]}"]}
+03/03/2020 03:18:47 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48070], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T3\"]}"]}
+03/03/2020 03:18:47 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48070], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T3\"]}"]}
+03/03/2020 03:22:05 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 48440], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 48440]}]}
+03/03/2020 03:22:11 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48440], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:22:11 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48440], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:22:24 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 48480], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 48480]}]}
+03/03/2020 03:22:28 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:22:28 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:22:33 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 03:22:33 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 03:22:37 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T2\"}"]}
+03/03/2020 03:22:37 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T2\"}"]}
+03/03/2020 03:22:40 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T2\"}"]}
+03/03/2020 03:22:40 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T2\"}"]}
+03/03/2020 03:23:13 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48440], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:23:13 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48440], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:23:16 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:23:16 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:23:18 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 03:23:18 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 48480], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 03:36:46 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 50208], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 50208]}]}
+03/03/2020 03:37:19 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 50272], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 50272]}]}
+03/03/2020 03:37:24 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 50272], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"Fil\", \"20\"]}"]}
+03/03/2020 03:37:24 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 50272], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"Fil\", \"20\"]}"]}
+03/03/2020 03:38:07 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 50370], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 50370]}]}
+03/03/2020 03:38:13 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 50370], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Fil\"}"]}
+03/03/2020 03:40:30 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 50692], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 50692]}]}
+03/03/2020 03:40:35 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 50704], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 50704]}]}
+03/03/2020 03:40:42 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 50718], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 50718]}]}
+03/03/2020 03:40:46 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 50718], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:40:46 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 50718], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:40:49 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 50704], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:43:24 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 51026], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 51026]}]}
+03/03/2020 03:43:27 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 51034], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 51034]}]}
+03/03/2020 03:43:29 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 51040], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 51040]}]}
+03/03/2020 03:43:33 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51034], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:43:33 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 51034], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:43:35 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51040], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:43:35 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 51040], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:43:49 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51034], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:43:49 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 51034], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:43:58 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51034], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T2\", \"25\"]}"]}
+03/03/2020 03:43:58 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 51034], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T2\", \"25\"]}"]}
+03/03/2020 03:44:03 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51040], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T2\"}"]}
+03/03/2020 03:44:03 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 51040], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T2\"}"]}
+03/03/2020 03:44:05 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51040], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T2\"}"]}
+03/03/2020 03:47:30 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 51526], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 51526]}]}
+03/03/2020 03:47:32 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 51532], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 51532]}]}
+03/03/2020 03:47:34 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 51538], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 51538]}]}
+03/03/2020 03:47:46 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51538], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:47:46 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 51538], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:47:52 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51532], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:47:52 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 51532], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:48:03 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51538], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:49:44 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 51806], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 51806]}]}
+03/03/2020 03:49:49 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 51826], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 51826]}]}
+03/03/2020 03:49:50 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 51832], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 51832]}]}
+03/03/2020 03:49:57 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51826], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:49:57 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 51826], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:49:59 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51832], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:49:59 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 51832], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:50:02 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 51826], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:51:54 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 52060], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 52060]}]}
+03/03/2020 03:51:58 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 52072], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 52072]}]}
+03/03/2020 03:51:58 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 52074], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 52074]}]}
+03/03/2020 03:52:03 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52074], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:52:03 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52074], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:52:12 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52072], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:52:12 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52072], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:52:17 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52072], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T2\"}"]}
+03/03/2020 03:52:17 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52072], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T2\"}"]}
+03/03/2020 03:52:20 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52072], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 03:52:20 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52072], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 03:52:23 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52072], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:52:23 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52072], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:52:25 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52074], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:52:25 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52074], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:52:38 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52072], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:52:38 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52072], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:55:47 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 52532], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 52532]}]}
+03/03/2020 03:55:47 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 52536], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 52536]}]}
+03/03/2020 03:55:48 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 52538], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 52538]}]}
+03/03/2020 03:55:55 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52538], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:55:55 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52538], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:55:58 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52536], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:55:58 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52536], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:56:02 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52536], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 03:56:02 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52536], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 03:56:04 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52536], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:56:04 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52536], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:56:06 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52538], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:56:06 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52538], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"T1\"]}"]}
+03/03/2020 03:58:30 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 52858], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 52858]}]}
+03/03/2020 03:58:31 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 52862], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 52862]}]}
+03/03/2020 03:58:33 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 52868], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 52868]}]}
+03/03/2020 03:58:38 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52862], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:58:38 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52862], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 03:58:41 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52868], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:58:41 PM - DEBUG: {"tag": "Broker: ", "data": "{\"user\": \"T1\", \"temperature\": \"20\"}"}
+03/03/2020 03:58:41 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52868], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 03:59:00 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 52868], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 03:59:00 PM - DEBUG: {"tag": "Broker: ", "data": "{\"user\": \"VACANCY\", \"temperature\": \"15\"}"}
+03/03/2020 03:59:00 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 52868], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 04:03:38 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 53446], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 53446]}]}
+03/03/2020 04:04:17 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 53536], {"device": "smart_lock", "action": "SYN_ACK", "device_address": ["127.0.0.1", 53536]}]}
+03/03/2020 04:04:18 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 53540], {"device": "management_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 53540]}]}
+03/03/2020 04:04:27 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 53540], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 04:04:27 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 53540], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"T1\", \"20\"]}"]}
+03/03/2020 04:04:34 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 53536], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 04:04:34 PM - DEBUG: {"tag": "Notify: ", "data": "{\"device\": \"broker\", \"user\": \"T1\", \"temperature\": \"20\"}"}
+03/03/2020 04:04:34 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 53536], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 04:05:07 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 53540], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"Ling\", \"27\"]}"]}
+03/03/2020 04:05:07 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 53540], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"Ling\", \"27\"]}"]}
+03/03/2020 04:05:13 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 53536], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Ling\"}"]}
+03/03/2020 04:05:13 PM - DEBUG: {"tag": "Notify: ", "data": "{\"device\": \"broker\", \"user\": \"Ling\", \"temperature\": \"27\"}"}
+03/03/2020 04:05:13 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 53536], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"Ling\"}"]}
+03/03/2020 04:05:23 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 53536], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"Ling\"}"]}
+03/03/2020 04:05:23 PM - DEBUG: {"tag": "Notify: ", "data": "{\"device\": \"broker\", \"user\": \"T1\", \"temperature\": \"20\"}"}
+03/03/2020 04:05:23 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 53536], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"Ling\"}"]}
+03/03/2020 04:06:10 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 53536], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 04:06:10 PM - DEBUG: {"tag": "Notify: ", "data": "{\"device\": \"broker\", \"user\": \"VACANCY\", \"temperature\": \"15\"}"}
+03/03/2020 04:06:10 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 53536], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user\": \"T1\"}"]}
+03/03/2020 04:06:19 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 53536], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 04:06:19 PM - DEBUG: {"tag": "Notify: ", "data": "{\"device\": \"broker\", \"user\": \"T1\", \"temperature\": \"20\"}"}
+03/03/2020 04:06:19 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 53536], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user\": \"T1\"}"]}
+03/03/2020 04:07:42 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 53914], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 53914]}]}
+03/03/2020 04:08:15 PM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 53980], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 53980]}]}
+03/03/2020 04:08:51 PM - DEBUG: {"tag": "Update Existing Connection", "data": [["127.0.0.1", 54058], {"device": "thermometer_app", "action": "SYN_ACK", "device_address": ["127.0.0.1", 54058]}]}
