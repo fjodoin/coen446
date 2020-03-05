@@ -86,7 +86,7 @@ class ServiceThread(threading.Thread):
         # Device asking to be signed up to a topic(s) TOPIC_SUBSCRIPTION: "TOPIC_XYZ"
         if service_input_dict['action'] == "TOPIC_SUBSCRIPTION":
         	for topic_of_interest in device_data['topics_of_interest']:
-        		print(topic_of_interest)
+        		# print(topic_of_interest)
         		subscribe_device(topic_of_interest, service_input_dict) 
         elif device_name == "smart_lock":
             self.service_smart_lock(service_input_dict)
@@ -102,7 +102,7 @@ class ServiceThread(threading.Thread):
     	}
     	topic_notification_string = json.dumps(topic_notification_dict)
     	encoded_payload_header, encoded_payload = create_packet(topic_notification_string)
-    	print("DOOR " + service_input_dict['action'] + " by " + str(service_input_dict['user_info']))
+    	# print("DOOR " + service_input_dict['action'] + " by " + str(service_input_dict['user_info']))
     	for subscribed_device in topic_dict['DOOR_STATUS']:
     		subscribed_device_socket = ecosystem_devices[subscribed_device]['device_socket']
     		subscribed_device_socket.sendall(encoded_payload_header + encoded_payload)
@@ -145,39 +145,39 @@ class ServiceThread(threading.Thread):
     	}
     	topic_notification_string = json.dumps(topic_notification_dict)
     	encoded_payload_header, encoded_payload = create_packet(topic_notification_string)
-    	print("TOPIC NOTIFICATION")
+    	# print("TOPIC NOTIFICATION")
     	for subscribed_device in topic_dict['USER_MANAGEMENT']: 
     		subscribed_device_socket = ecosystem_devices[subscribed_device]['device_socket']       
     		subscribed_device_socket.sendall(encoded_payload_header + encoded_payload)
         
     	if service_input_dict['action'] == "ADD_NEW_USER":
-    	    print("USER")
+    	    # print("USER")
     	    users_database.update({service_input_dict['user_info'][0]: service_input_dict['user_info'][1]})
-    	    print(users_database)
-    	else:
-    		print("DELETE_USER")
-    		deleted_user = users_database.pop(service_input_dict['user_info'][0])
-    		if len(connected_users) > 0:
-    			print("SET TEMP TO PREF OF USER: " + list(connected_users.keys())[len(connected_users)-1])
+    	    # print(users_database)
+    	# else:
+    		# print("DELETE_USER")
+    		# deleted_user = users_database.pop(service_input_dict['user_info'][0])
+    		# if len(connected_users) > 0:
+    			# print("SET TEMP TO PREF OF USER: " + list(connected_users.keys())[len(connected_users)-1])
     		# 	self.service_thermometer(list(connected_users.keys())[len(connected_users)-1], users_database[list(connected_users.keys())[len(connected_users)-1]])
     		# else:
     		# 	print("SET VACANCY TEMP")
     		# 	self.service_thermometer("VACANCY", "15")
         # print(users_database)
 
-    def service_thermometer(self, user, temperature):
-        notification_dict = {
-            "device": "broker",
-            "user": user,
-            "temperature": temperature
-        }
-        notification_string = json.dumps(notification_dict)
-        encoded_payload_header, encoded_payload = create_packet(notification_string)
-        thermometer_sock = connected_devices_list[0]
-        thermometer_sock.sendall(encoded_payload_header + encoded_payload)
-        logging_semaphore.acquire()
-        log_data("Notify: ", notification_string)
-        logging_semaphore.release() 
+    # def service_thermometer(self, user, temperature):
+    #     notification_dict = {
+    #         "device": "broker",
+    #         "user": user,
+    #         "temperature": temperature
+    #     }
+    #     notification_string = json.dumps(notification_dict)
+    #     encoded_payload_header, encoded_payload = create_packet(notification_string)
+    #     thermometer_sock = connected_devices_list[0]
+    #     thermometer_sock.sendall(encoded_payload_header + encoded_payload)
+    #     logging_semaphore.acquire()
+    #     log_data("Notify: ", notification_string)
+    #     logging_semaphore.release() 
 
 
 class MyTCPHandler(socketserver.BaseRequestHandler):
@@ -211,7 +211,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
         	ecosystem_devices.update({device_data['device']: device_data})  # Add New Device to broker database
 	        if ('topic_to_publish' in device_data) :
 		        if not(device_data['topic_to_publish'] in topic_dict):
-		        	print("New Topic Added")
+		        	# print("New Topic Added")
 		        	subscribed_devices = []
 		        	topic_dict.update({device_data['topic_to_publish']: subscribed_devices})
 		        	print(topic_dict)
@@ -230,7 +230,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 	        logging_semaphore.release()
 	        
 	        #debugging
-	        print(topic_dict)
+	        # print(topic_dict)
 
 	    # LISTENING LOOP
         while True:
@@ -250,6 +250,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 if __name__ == "__main__":
     HOST, PORT = "localhost", 9999
     # Create the server, binding to localhost on port 9999
+    print("Broker launched [...]")
     with socketserver.ThreadingTCPServer((HOST, PORT), MyTCPHandler) as server:
     # Activate the server; this will keep running until you
     # interrupt the program with Ctrl-C
