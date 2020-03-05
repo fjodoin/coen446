@@ -23,9 +23,9 @@ terminal4#>python3 thermometer_app.py
 
 ### WARNING ### 
 When rebooting the project, you must follow the sequence below in order to avoid socket threading issues. If ever it occurs, simply wait 60seconds before rebooting the broker.
-a. close all GUI windows
-b. terminate the thermometer listening thread; ctrl+c in terminal4
-c. terminate the broker listening thread; ctrl+c x2 in terminal1
+1. close all GUI windows
+2. terminate the thermometer listening thread; ctrl+c in terminal4
+3. terminate the broker listening thread; ctrl+c x2 in terminal1
 
 TODO:
 	Create test cases
