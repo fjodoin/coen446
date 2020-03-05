@@ -24,7 +24,8 @@ def create_packet(payload):
 def syn_ack(sock, device_name):
     payload_dict = {
         "device": device_name,
-        "action": "SYN_ACK"
+        "action": "SYN_ACK",
+        "topic_to_publish": "USER_MANAGEMENT"
     }
     encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
     sock.sendall(encoded_payload_header + encoded_payload)

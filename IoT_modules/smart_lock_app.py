@@ -24,11 +24,11 @@ def create_packet(payload):
 def syn_ack(sock, device_name):
     payload_dict = {
         "device": device_name,
-        "action": "SYN_ACK"
+        "action": "SYN_ACK",
+        "topic_to_publish": "DOOR_STATUS"
     }
     encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
     sock.sendall(encoded_payload_header + encoded_payload)
-    print("Syn ack sent")
 
 
 class SmartLockApp(QDialog):
@@ -102,7 +102,7 @@ class SmartLockApp(QDialog):
             payload_dict = {
                 "device": "smart_lock",
                 "action": "ENTERING",
-                "user": user
+                "user_info": [user]
             }
             encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
             self.sock.sendall(encoded_payload_header + encoded_payload)
@@ -124,7 +124,7 @@ class SmartLockApp(QDialog):
             payload_dict = {
                 "device": "smart_lock",
                 "action": "LEAVING",
-                "user": user
+                "user_info": [user]
             }
             encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
             self.sock.sendall(encoded_payload_header + encoded_payload)

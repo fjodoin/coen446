@@ -17,6 +17,9 @@ import time
 HEADER_LENGTH = 10
 HOST, PORT = "localhost", 9999
 
+user_database = {}
+connected_users = {}
+
 
 def create_packet(payload):
     encoded_payload = payload.encode("utf-8")
@@ -26,7 +29,8 @@ def create_packet(payload):
 def syn_ack(sock, device_name):
     payload_dict = {
                 "device": device_name,
-                "action": "SYN_ACK"
+                "action": "SYN_ACK",
+                "topics_of_interest": ["DOOR_STATUS", "USER_MANAGEMENT"]
             }
     encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
     sock.sendall(encoded_payload_header + encoded_payload)
@@ -39,6 +43,7 @@ class ListenThread(threading.Thread):
         self.sock = _sock
         self.temperatureDial = _temperatureDial
         self.recentUser = _recentUser
+        self.time_stamp = ""
         print("Listening Thread started")
 
     def run(self):
@@ -48,9 +53,44 @@ class ListenThread(threading.Thread):
             print("PACKET RECEIVED")
             payload_string = self.sock.recv(payload_header).decode("utf-8")
             payload_dict = json.loads(payload_string)
-            time_stamp = str(datetime.datetime.now())[:19]
-            self.temperatureDial.setValue(int(payload_dict['temperature']))
-            self.recentUser.setText(payload_dict['user'] + " @ " + time_stamp)
+            print(payload_dict)
+            self.time_stamp = str(datetime.datetime.now())[:19]
+
+            if payload_dict['notification'] == "ADD_NEW_USER":
+                print("ADD USER TO DATABASE!")
+                user_database.update({payload_dict['user_info'][0]: payload_dict['user_info'][1]})
+                print(user_database)
+            elif payload_dict['notification'] == "DELETE_USER" and payload_dict['user_info'][0] in user_database:
+                print("DELETE_USER FROM DATABASE")
+                user_database.pop(payload_dict['user_info'][0])
+                print(user_database)
+            elif payload_dict['notification'] == "ENTERING" and payload_dict['user_info'][0] in user_database:
+                print("USER ENTERING!")
+                # TODO CHECK IF ALREADY CONNECTED
+                connected_users.update({payload_dict['user_info'][0]: self.time_stamp})
+                print("USER TEMP: " + str(list(connected_users.keys())[0]))
+                self.set_temp(str(list(connected_users.keys())[0]), user_database[str(list(connected_users.keys())[0])])
+            elif payload_dict['notification'] == "LEAVING" and payload_dict['user_info'][0] in connected_users:
+                print("USER LEAVING!")
+                connected_users.pop(payload_dict['user_info'][0])
+                if len(connected_users) > 0:
+                    print("USER TEMP: " + str(list(connected_users.keys())[0]))
+                    self.set_temp(str(list(connected_users.keys())[0]), user_database[str(list(connected_users.keys())[0])])
+                else:
+                    print("VACANT TEMP!")
+                    self.set_temp("VACANT", "15")
+
+    def set_temp(self, user_name, user_temp):
+        if user_name != "VACANT":
+            print(user_name, user_temp, connected_users[user_name])
+            self.temperatureDial.setValue(int(user_temp))
+            self.recentUser.setText(user_name + " @ " + connected_users[user_name])
+        elif user_name == "VACANT":
+            print("VACANT", "15", self.time_stamp)
+            self.temperatureDial.setValue(15)
+            self.recentUser.setText(user_name + " @ " + self.time_stamp)
+
+            # self.recentUser.setText(payload_dict['user'] + " @ " + self.time_stamp)
 
 # Echo Thread -- Used for testing Listening Thread
 # class EchoThread(threading.Thread):
@@ -86,7 +126,7 @@ class ThermometerApp(QDialog):
         syn_ack(self.sock, "thermometer_app")
         temp = 15
         first_user = "VACANT"
-        time_stamp = str(datetime.datetime.now())[:19]
+        self.time_stamp = str(datetime.datetime.now())[:19]
         super(ThermometerApp, self).__init__(parent)
         self.resize(300, 150)
         self.originalPalette = QApplication.palette()
@@ -96,7 +136,7 @@ class ThermometerApp(QDialog):
         self.centerGroupBox.setAlignment(Qt.AlignCenter)
         self.recentUser = QLabel()
         self.recentUser.setAlignment(Qt.AlignCenter)
-        self.recentUser.setText( first_user + " @ " + time_stamp)
+        self.recentUser.setText( first_user + " @ " + self.time_stamp)
         temperatureFont = QFont("Helvatica", 8)
         temperatureLabel = QLabel("Select Temperature")
         temperatureLabel.setAlignment(Qt.AlignCenter)
