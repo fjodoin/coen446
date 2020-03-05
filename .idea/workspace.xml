@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1480b877-cc32-4b16-853c-b23420da255e" name="Default Changelist" comment="" />
+    <list default="true" id="1480b877-cc32-4b16-853c-b23420da255e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/IoT_modules/Test_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IoT_modules/broker.log" beforeDir="false" afterPath="$PROJECT_DIR$/IoT_modules/broker.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IoT_modules/broker.py" beforeDir="false" afterPath="$PROJECT_DIR$/IoT_modules/broker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IoT_modules/management_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/IoT_modules/management_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IoT_modules/smart_lock_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/IoT_modules/smart_lock_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IoT_modules/thermometer_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/IoT_modules/thermometer_app.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
