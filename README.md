@@ -1,6 +1,12 @@
 # coen446
 IoT MQTT project
 
+Clone the project onto your machine and navigate to the /[path-to-project]/coen446/IoT_modules directory
+
+## MUST HAVE Python3 and Pip3 installed on your machine before proceeding ##
+Make to be in the /IoT_modules directory and install the requirements.txt file before attempting to launch the project; use the following command
+terminal#>pip3 install -r requirements.txt
+
 This project emulates a smart home ecosystem with 3 devices connected in a Publisher / Subscriber architecture.
 
 DEVICE 1: MANAGEMENT APPLICATION (management_app.py)	(PUBLISHER)
