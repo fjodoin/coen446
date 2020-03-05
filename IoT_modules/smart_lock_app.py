@@ -21,6 +21,15 @@ def create_packet(payload):
     encoded_payload_header = f"{len(encoded_payload):<{HEADER_LENGTH}}".encode("utf-8")
     return encoded_payload_header, encoded_payload
 
+def syn_ack(sock, device_name):
+    payload_dict = {
+        "device": device_name,
+        "action": "SYN_ACK",
+        "topic_to_publish": "DOOR_STATUS"
+    }
+    encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
+    sock.sendall(encoded_payload_header + encoded_payload)
+
 
 class SmartLockApp(QDialog):
     """
@@ -32,6 +41,8 @@ class SmartLockApp(QDialog):
         :param parent:
         """
         self.sock = sock
+        syn_ack(self.sock, "smart_lock")
+
         super(SmartLockApp, self).__init__(parent)
         self.resize(700, 100)
         self.originalPalette = QApplication.palette()
@@ -91,7 +102,7 @@ class SmartLockApp(QDialog):
             payload_dict = {
                 "device": "smart_lock",
                 "action": "ENTERING",
-                "user": user
+                "user_info": [user]
             }
             encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
             self.sock.sendall(encoded_payload_header + encoded_payload)
@@ -113,7 +124,7 @@ class SmartLockApp(QDialog):
             payload_dict = {
                 "device": "smart_lock",
                 "action": "LEAVING",
-                "user": user
+                "user_info": [user]
             }
             encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
             self.sock.sendall(encoded_payload_header + encoded_payload)
