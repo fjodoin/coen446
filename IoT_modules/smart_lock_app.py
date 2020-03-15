@@ -17,6 +17,10 @@ HOST, PORT = "localhost", 9999
 
 
 def create_packet(payload):
+    """
+    askansjnasjkdnjdkasd
+    :param paylod: string
+    """
     encoded_payload = payload.encode("utf-8")
     encoded_payload_header = f"{len(encoded_payload):<{HEADER_LENGTH}}".encode("utf-8")
     return encoded_payload_header, encoded_payload

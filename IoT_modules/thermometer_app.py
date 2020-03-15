@@ -20,6 +20,8 @@ HOST, PORT = "localhost", 9999
 user_database = {}
 connected_users = {}
 
+print("test123")
+
 
 def create_packet(payload):
     encoded_payload = payload.encode("utf-8")
@@ -204,9 +206,9 @@ class ThermometerApp(QDialog):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 # Create a socket (SOCK_STREAM means a TCP socket)
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-    # Connect to server and send data
-    sock.connect((HOST, PORT))
-    thermometerApp = ThermometerApp(sock)
-    thermometerApp.show()
-    sys.exit(app.exec_())
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        # Connect to server and send data
+        sock.connect((HOST, PORT))
+        thermometerApp = ThermometerApp(sock)
+        thermometerApp.show()
+        sys.exit(app.exec_())
