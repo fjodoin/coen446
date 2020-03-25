@@ -3,42 +3,56 @@ Winter2020 - Concordia University
 COEN446 - Internet Of Things
 MANAGEMENT APPLICATION
 """
+import sys, threading, socket, json
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-import sys
-import threading
-import socket
-import json
 
 
+############################################ VARIABLE DECLARATION ############################################
 HEADER_LENGTH = 10
 HOST, PORT = "localhost", 9999
+###################################### END OF VARIABLE DECLARATION ###########################################
 
 
+###################################### VARIOUS MANAGEMENT APP FUNCTIONS ######################################
 def create_packet(payload):
+    """
+    Format outgoing messages to a standard TCP packet with HEADER_LENGTH + payload
+    :param payload: string
+    :return encoded_payload_header, encoded_payload: bytes, bytes
+    """
     encoded_payload = payload.encode("utf-8")
     encoded_payload_header = f"{len(encoded_payload):<{HEADER_LENGTH}}".encode("utf-8")
     return encoded_payload_header, encoded_payload
 
+
 def syn_ack(sock, device_name):
-    payload_dict = {
-        "device": device_name,
-        "action": "SYN_ACK",
-        "topic_to_publish": "USER_MANAGEMENT"
-    }
-    encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
-    sock.sendall(encoded_payload_header + encoded_payload)
+	"""
+	Function used during connection establishment; communicates device info to broker
+	:param sock: TCP socket
+	:param device_name: string
+	"""
+	payload_dict = {
+	    "device": device_name,
+	    "action": "SYN_ACK",
+	    "topic_to_publish": "USER_MANAGEMENT"
+	}
+	encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
+	sock.sendall(encoded_payload_header + encoded_payload)
+################################ END OF VARIOUS MANAGEMENT APP FUNCTIONS #####################################
 
 
+########################################## MANAGEMENT APP GUI ################################################
 class ManagementApp(QDialog):
     """
-
+	PyQt5 GUI class; contains GUI and functions pertaining to management app
     """
     def __init__(self, sock, parent=None):
         """
-
-        :param parent:
+		Generate GUI upon initialization
+		:parak sock: TCP socket
+        :param parent: None
         """
         self.sock = sock
         syn_ack(self.sock, "management_app")
@@ -107,7 +121,7 @@ class ManagementApp(QDialog):
 
     def addNewUser(self):
         """
-
+		Adding new user to the Management App; communicates username and preferred temperature to the broker via topic publishing
         :return:
         """
         user = self.newUserLineEdit.text()
@@ -128,10 +142,9 @@ class ManagementApp(QDialog):
         else:
             self.newUserLineEdit.setText("")
 
-
     def deleteUser(self):
         """
-
+		Remove existing user from the Management App; communicates username to the broker via topic publishing
         :return:
         """
         if self.userTableWidget.rowCount() > 0:
@@ -148,8 +161,8 @@ class ManagementApp(QDialog):
 
     def changeStyle(self, styleName):
         """
-
-        :param styleName:
+		Used for GUI design; called during initialization
+        :param styleName: string
         :return:
         """
         QApplication.setStyle(QStyleFactory.create(styleName))
@@ -157,20 +170,21 @@ class ManagementApp(QDialog):
 
     def changePalette(self):
         """
-
+		Used for GUI design; called from changeStyle
         :return:
         """
         QApplication.setPalette(self.originalPalette)
+###################################### END OF MANAGEMENT APP GUI #############################################
 
 
+###################################################### MAIN ##################################################
 if __name__ == '__main__':
-    import sys
-
-    app = QApplication(sys.argv)
-# Create a socket (SOCK_STREAM means a TCP socket)
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-    # Connect to server and send data
-    sock.connect((HOST, PORT))
-    managementApp = ManagementApp(sock)
-    managementApp.show()
-    sys.exit(app.exec_())
+	app = QApplication(sys.argv)
+	# Create a socket (SOCK_STREAM means a TCP socket)
+	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+	    # Connect to server and send data
+	    sock.connect((HOST, PORT))
+	    managementApp = ManagementApp(sock)
+	    managementApp.show()
+	    sys.exit(app.exec_())
+################################################## END OF MAIN ################################################

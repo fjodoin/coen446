@@ -1009,3 +1009,4 @@
 03/25/2020 07:37:04 AM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 56232], "{\"device\": \"smart_lock\", \"action\": \"ENTERING\", \"user_info\": [\"Fil\"]}"]}
 03/25/2020 07:37:08 AM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 56232], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user_info\": [\"Fil\"]}"]}
 03/25/2020 07:37:08 AM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 56232], "{\"device\": \"smart_lock\", \"action\": \"LEAVING\", \"user_info\": [\"Fil\"]}"]}
+03/25/2020 08:44:50 AM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 57978], "{'device': 'management_app', 'action': 'SYN_ACK', 'topic_to_publish': 'USER_MANAGEMENT', 'device_socket': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9999), raddr=('127.0.0.1', 57978)>}"]}
