@@ -5,31 +5,38 @@ import json
 import datetime
 import os
 
-# os.system("python3 smart_lock_app.py")
-# os.system("pthyon3 management_app.py")
-# os.system("pthyon3 thermometer_app.py")
 
+############################################ VARIABLE DECLARATION ############################################
+# Logging
 broker_log_file = 'broker.log'
 logging.basicConfig(filename = broker_log_file, filemode = 'a', level = logging.DEBUG, format = '%(asctime)s - %(levelname)s: %(message)s', datefmt = '%m/%d/%Y %I:%M:%S %p')
 
+# TCP Packet header length
 HEADER_LENGTH = 10
 
+# Various dicts and lists used by broker
 ecosystem_devices = {}
 connected_users = {}
 users_database = {}
 topic_dict = {}
-
 service_queue = []
 connected_devices_list = []
 publisher_list = []
 socket_list = []
 
+# Thread semaphores
 logging_semaphore = threading.Semaphore()
 service_queue_semaphore = threading.Semaphore()
+###################################### END OF VARIABLE DECLARATION ###########################################
 
-
-
+########################################## VARIOUS BROKER FUNCTIONS ##########################################
 def log_data(tag, data):
+    """
+    Log all incoming and outgoing messages (to the broker.log file) which pass through the broker
+    :param tag: string
+    :param data: string
+    :return:
+    """
     log_dict = {
         "tag": tag,
         "data": data
@@ -39,12 +46,22 @@ def log_data(tag, data):
 
 
 def create_packet(payload):
+    """
+    Format outgoing messages to a standard TCP packet with HEADER_LENGTH + payload
+    :param payload: string
+    :return:
+    """
     encoded_payload = payload.encode("utf-8")
     encoded_payload_header = f"{len(encoded_payload):<{HEADER_LENGTH}}".encode("utf-8")
     return encoded_payload_header, encoded_payload
 
 
 def broadcast_topic(device_data):
+    """
+    Broadcast information of new topic to be published to all devices connected to the broker
+    :param device_data: dict
+    :return:
+    """
 	broadcast_dict = {
 		"action": "BROADCAST_TOPIC",
 		"publisher": device_data['device'],
@@ -56,11 +73,20 @@ def broadcast_topic(device_data):
 		if device[0] != device_data['device']:
 			device[1].sendall(encoded_payload_header + encoded_payload)
 
+
 def subscribe_device(topic_of_interest, service_input_dict):
+    """
+    Subscribes a device (specified in service_input_dict) to a topic_of_interest; said device will now receive topic updates from said topic_of_interest
+    :param topic_of_interest: string
+    :param service_input_dict: dict
+    :return:
+    """
     	print("New Device:" + service_input_dict['device'] + " Subscribed to topic: " + topic_of_interest)
     	topic_dict[topic_of_interest].append(service_input_dict['device'])
+####################################### END OF VARIOUS BROKER FUNCTIONS ######################################
 
 
+############################################### SERVICE THREAD ###############################################
 class ServiceThread(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
