@@ -3,32 +3,38 @@ Winter2020 - Concordia University
 COEN446 - Internet Of Things
 MANAGEMENT APPLICATION
 """
+import sys, threading, socket, json, datetime
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-import sys
-import threading
-import socket
-import json
-import datetime
-import time
 
-
+############################################ VARIABLE DECLARATION ############################################
 HEADER_LENGTH = 10
 HOST, PORT = "localhost", 9999
 
 user_database = {}
 connected_users = {}
-
-print("test123")
+###################################### END OF VARIABLE DECLARATION ###########################################
 
 
 def create_packet(payload):
+    """
+    Format outgoing messages to a standard TCP packet with HEADER_LENGTH + payload
+    :param payload: string
+    :return encoded_payload_header, encoded_payload: bytes, bytes
+    """
     encoded_payload = payload.encode("utf-8")
     encoded_payload_header = f"{len(encoded_payload):<{HEADER_LENGTH}}".encode("utf-8")
     return encoded_payload_header, encoded_payload
 
+
+###################################### VARIOUS THERMOMETER APP FUNCTIONS #####################################
 def syn_ack(sock, device_name):
+    """
+    Function used during connection establishment; communicates device info to broker
+    :param sock: TCP socket
+    :param device_name: string
+    """
     payload_dict = {
                 "device": device_name,
                 "action": "SYN_ACK",
@@ -36,10 +42,14 @@ def syn_ack(sock, device_name):
             }
     encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
     sock.sendall(encoded_payload_header + encoded_payload)
+################################ END OF VARIOUS THERMOMETER APP FUNCTIONS ####################################
 
 
-# Listen Thread
+############################################ LISTENING THREAD ################################################
 class ListenThread(threading.Thread):
+    """
+    Listening Thread is used to capture topics published by the Broker which the Thermometer App is subscribed to
+    """
     def __init__(self, _sock, _temperatureDial, _recentUser):
         threading.Thread.__init__(self)
         self.sock = _sock
@@ -49,13 +59,14 @@ class ListenThread(threading.Thread):
         print("Listening Thread started")
 
     def run(self):
+        """
+        Thread listens to incoming messages services the message immediately
+        """
         while True:
             # LISTENING FOR INCOMING MESSAGES
             payload_header = int(self.sock.recv(HEADER_LENGTH).decode("utf-8"))
-            print("PACKET RECEIVED")
             payload_string = self.sock.recv(payload_header).decode("utf-8")
             payload_dict = json.loads(payload_string)
-            print(payload_dict)
             self.time_stamp = str(datetime.datetime.now())[:19]
 
             if payload_dict['notification'] == "ADD_NEW_USER":
@@ -68,7 +79,7 @@ class ListenThread(threading.Thread):
                 print(user_database)
             elif payload_dict['notification'] == "ENTERING" and payload_dict['user_info'][0] in user_database:
                 print("USER ENTERING!")
-                # TODO CHECK IF ALREADY CONNECTED
+                # TODO check if already connected
                 connected_users.update({payload_dict['user_info'][0]: self.time_stamp})
                 print("USER TEMP: " + str(list(connected_users.keys())[0]))
                 self.set_temp(str(list(connected_users.keys())[0]), user_database[str(list(connected_users.keys())[0])])
@@ -83,6 +94,12 @@ class ListenThread(threading.Thread):
                     self.set_temp("VACANT", "15")
 
     def set_temp(self, user_name, user_temp):
+        """
+        Function used to set the temperature depending on who (or who is not) in the house
+        :param user_name: string
+        "param user_temp: string"
+        :return:
+        """
         if user_name != "VACANT":
             print(user_name, user_temp, connected_users[user_name])
             self.temperatureDial.setValue(int(user_temp))
@@ -91,38 +108,19 @@ class ListenThread(threading.Thread):
             print("VACANT", "15", self.time_stamp)
             self.temperatureDial.setValue(15)
             self.recentUser.setText(user_name + " @ " + self.time_stamp)
-
-            # self.recentUser.setText(payload_dict['user'] + " @ " + self.time_stamp)
-
-# Echo Thread -- Used for testing Listening Thread
-# class EchoThread(threading.Thread):
-#     def __init__(self, _sock):
-#         threading.Thread.__init__(self)
-#         self.sock = _sock
-#         self.start_temp = "10"
-#         print("Echo Thread started")
-
-#     def run(self):
-#         while True:
-#             # LISTENING FOR INCOMING MESSAGES
-#             message = {
-#                 "user": "user1",
-#                 "temperature": self.start_temp
-#             }
-#             message = json.dumps(message)
-#             encoded_message_header, encoded_message = create_packet(message)
-#             self.sock.sendall(encoded_message_header + encoded_message)
-#             self.start_temp = int(self.start_temp) + 1
-#             time.sleep(2)
+######################################## END OF LISTENING THREAD #############################################
 
 
+############################################ THERMOMETER GUI #################################################
 class ThermometerApp(QDialog):
     """
-    TODO
+    PyQt5 GUI class; contains GUI and functions pertaining to management app
     """
     def __init__(self, sock, parent = None):
         """
-        TODO
+        Generate GUI upon initialization
+        :parak sock: TCP socket
+        :param parent: None
         """
         self.sock = sock
         syn_ack(self.sock, "thermometer_app")
@@ -181,14 +179,10 @@ class ThermometerApp(QDialog):
         listening_thread = ListenThread(self.sock, self.temperatureDial, self.recentUser)
         listening_thread.start()
 
-        # Used for testing Listen Thread
-        # echo_thread = EchoThread(self.sock)
-        # echo_thread.start()
-
     def changeStyle(self, styleName):
         """
-
-        :param styleName:
+        Used for GUI design; called during initialization
+        :param styleName: string
         :return:
         """
         QApplication.setStyle(QStyleFactory.create(styleName))
@@ -196,13 +190,14 @@ class ThermometerApp(QDialog):
 
     def changePalette(self):
         """
-
+        Used for GUI design; called from changeStyle
         :return:
         """
         QApplication.setPalette(self.originalPalette)
+######################################## END OF THERMOMETER GUI ##############################################
 
 
-
+###################################################### MAIN ##################################################
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 # Create a socket (SOCK_STREAM means a TCP socket)
@@ -212,3 +207,4 @@ if __name__ == '__main__':
         thermometerApp = ThermometerApp(sock)
         thermometerApp.show()
         sys.exit(app.exec_())
+################################################## END OF MAIN ################################################
