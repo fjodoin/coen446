@@ -1,7 +1,7 @@
 """
 Winter2020 - Concordia University
 COEN446 - Internet Of Things
-MANAGEMENT APPLICATION
+THERMOMETER APPLICATION
 """
 import sys, threading, socket, json, datetime
 from PyQt5.QtCore import *
