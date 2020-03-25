@@ -3,29 +3,35 @@ Winter2020 - Concordia University
 COEN446 - Internet Of Things
 SMART LOCK APPLICATION
 """
+import sys, threading, socket, json
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-import sys
-import threading
-import socket
-import json
 
 
+############################################ VARIABLE DECLARATION ############################################
 HEADER_LENGTH = 10
 HOST, PORT = "localhost", 9999
+###################################### END OF VARIABLE DECLARATION ###########################################
 
 
+###################################### VARIOUS MANAGEMENT APP FUNCTIONS ######################################
 def create_packet(payload):
     """
-    askansjnasjkdnjdkasd
-    :param paylod: string
+    Format outgoing messages to a standard TCP packet with HEADER_LENGTH + payload
+    :param payload: string
+    :return encoded_payload_header, encoded_payload: bytes, bytes
     """
     encoded_payload = payload.encode("utf-8")
     encoded_payload_header = f"{len(encoded_payload):<{HEADER_LENGTH}}".encode("utf-8")
     return encoded_payload_header, encoded_payload
 
 def syn_ack(sock, device_name):
+    """
+    Function used during connection establishment; communicates device info to broker
+    :param sock: TCP socket
+    :param device_name: string
+    """
     payload_dict = {
         "device": device_name,
         "action": "SYN_ACK",
@@ -33,16 +39,19 @@ def syn_ack(sock, device_name):
     }
     encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
     sock.sendall(encoded_payload_header + encoded_payload)
+################################ END OF VARIOUS MANAGEMENT APP FUNCTIONS #####################################
 
 
+########################################## SMART LOCK APP GUI ################################################
 class SmartLockApp(QDialog):
     """
-    TODO
+    PyQt5 GUI class; contains GUI and functions pertaining to smart lock app
     """
     def __init__(self, sock, parent=None):
         """
-        TODO
-        :param parent:
+        Generate GUI upon initialization
+        :parak sock: TCP socket
+        :param parent: None
         """
         self.sock = sock
         syn_ack(self.sock, "smart_lock")
@@ -93,7 +102,7 @@ class SmartLockApp(QDialog):
 
     def userEntering(self):
         """
-        TODO
+        Communicates that a user is ENTERING to the broker via topic publishing
         :return:
         """
         user = self.userLineEdit.text()
@@ -115,7 +124,7 @@ class SmartLockApp(QDialog):
 
     def userLeaving(self):
         """
-        TODO
+        Communicates that a user IS LEAVING to the broker via topic publishing
         :return:
         """
         user = self.userLineEdit.text()
@@ -137,8 +146,8 @@ class SmartLockApp(QDialog):
 
     def changeStyle(self, styleName):
         """
-        # TODO
-        :param styleName:
+        Used for GUI design; called during initialization
+        :param styleName: string
         :return:
         """
         QApplication.setStyle(QStyleFactory.create(styleName))
@@ -146,19 +155,21 @@ class SmartLockApp(QDialog):
 
     def changePalette(self):
         """
-        # TODO
+        Used for GUI design; called from changeStyle
         :return:
         """
         QApplication.setPalette(self.originalPalette)
+###################################### END OF SMART LOCK APP GUI #############################################
 
 
+###################################################### MAIN ##################################################
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 # Create a socket (SOCK_STREAM means a TCP socket)
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-    # Connect to server and send data
-    sock.connect((HOST, PORT))
-    smartLockApp = SmartLockApp(sock)
-    smartLockApp.show()
-    sys.exit(app.exec_())
-
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        # Connect to server and send data
+        sock.connect((HOST, PORT))
+        smartLockApp = SmartLockApp(sock)
+        smartLockApp.show()
+        sys.exit(app.exec_())
+################################################## END OF MAIN ################################################
