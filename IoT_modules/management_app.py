@@ -147,17 +147,20 @@ class ManagementApp(QDialog):
 		Remove existing user from the Management App; communicates username to the broker via topic publishing
         :return:
         """
-        if self.userTableWidget.rowCount() > 0:
-            deleted_user_row = self.userTableWidget.selectedItems()[0]
-            deleted_user = self.userTableWidget.item(deleted_user_row.row(), 0).data(0)
-            self.userTableWidget.removeRow(self.userTableWidget.row(self.userTableWidget.selectedItems()[0]))
-            payload_dict = {
-                "device": "management_app",
-                "action": "DELETE_USER",
-                "user_info": [deleted_user]
-            }
-            encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
-            self.sock.sendall(encoded_payload_header + encoded_payload)
+        if (self.userTableWidget.rowCount() > 0) and (len(self.userTableWidget.selectedItems()) > 0):
+            if self.newUserLineEdit.text() is "":
+                deleted_user_row = self.userTableWidget.selectedItems()[0]
+                deleted_user = self.userTableWidget.item(deleted_user_row.row(), 0).data(0)
+                self.userTableWidget.removeRow(self.userTableWidget.row(self.userTableWidget.selectedItems()[0]))
+                payload_dict = {
+                    "device": "management_app",
+                    "action": "DELETE_USER",
+                    "user_info": [deleted_user]
+                }
+                encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
+                self.sock.sendall(encoded_payload_header + encoded_payload)
+            else:
+                pass
 
     def changeStyle(self, styleName):
         """

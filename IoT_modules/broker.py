@@ -122,10 +122,7 @@ class ServiceThread(threading.Thread):
         device_name = service_input_dict['device'] 
         
         # Device asking to be signed up to a topic(s) TOPIC_SUBSCRIPTION: "TOPIC_XYZ"
-        if service_input_dict['action'] == "TOPIC_SUBSCRIPTION":
-        	for topic_of_interest in device_data['topics_of_interest']:
-        		subscribe_device(topic_of_interest, service_input_dict) 
-        elif device_name == "smart_lock":
+        if device_name == "smart_lock":
             self.service_smart_lock(service_input_dict)
         elif device_name == "management_app":
             self.service_management_app(service_input_dict)
