@@ -64,8 +64,12 @@ class ManagementApp(QDialog):
         # LEFT BOX
         self.leftGroupBox = QGroupBox("Users")
         self.userTableWidget = QTableWidget(0, 2)
+        deleteUserPushButton = QPushButton("Delete User")
+        deleteUserPushButton.setDefault(True)
+        deleteUserPushButton.clicked.connect(self.deleteUser)
         layout = QVBoxLayout()
         layout.addWidget(self.userTableWidget)
+        layout.addWidget(deleteUserPushButton)
         layout.addStretch(1)
         self.leftGroupBox.setLayout(layout)
 
@@ -76,9 +80,6 @@ class ManagementApp(QDialog):
         addUserPushButton = QPushButton("Add User")
         addUserPushButton.setDefault(True)
         addUserPushButton.clicked.connect(self.addNewUser)
-        deleteUserPushButton = QPushButton("Delete User")
-        deleteUserPushButton.setDefault(True)
-        deleteUserPushButton.clicked.connect(self.deleteUser)
         temperatureFont = QFont("Helvatica", 8)
         temperatureLabel = QLabel("Select Temperature")
         temperatureLabel.setFont(temperatureFont)
@@ -103,7 +104,6 @@ class ManagementApp(QDialog):
         layout.addLayout(temperatureTitleLayout)
         layout.addLayout(temperatureLayout)
         layout.addWidget(addUserPushButton)
-        layout.addWidget(deleteUserPushButton)
         layout.addStretch(1)
         self.rightGroupBox.setLayout(layout)
 
@@ -148,19 +148,16 @@ class ManagementApp(QDialog):
         :return:
         """
         if (self.userTableWidget.rowCount() > 0) and (len(self.userTableWidget.selectedItems()) > 0):
-            if self.newUserLineEdit.text() is "":
-                deleted_user_row = self.userTableWidget.selectedItems()[0]
-                deleted_user = self.userTableWidget.item(deleted_user_row.row(), 0).data(0)
-                self.userTableWidget.removeRow(self.userTableWidget.row(self.userTableWidget.selectedItems()[0]))
-                payload_dict = {
-                    "device": "management_app",
-                    "action": "DELETE_USER",
-                    "user_info": [deleted_user]
-                }
-                encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
-                self.sock.sendall(encoded_payload_header + encoded_payload)
-            else:
-                pass
+            deleted_user_row = self.userTableWidget.selectedItems()[0]
+            deleted_user = self.userTableWidget.item(deleted_user_row.row(), 0).data(0)
+            self.userTableWidget.removeRow(self.userTableWidget.row(self.userTableWidget.selectedItems()[0]))
+            payload_dict = {
+                "device": "management_app",
+                "action": "DELETE_USER",
+                "user_info": [deleted_user]
+            }
+            encoded_payload_header, encoded_payload = create_packet(json.dumps(payload_dict))
+            self.sock.sendall(encoded_payload_header + encoded_payload)
 
     def changeStyle(self, styleName):
         """
