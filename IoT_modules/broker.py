@@ -3,7 +3,7 @@ Winter2020 - Concordia University
 COEN446 - Internet Of Things
 BROKER
 """
-import threading, logging, json
+import sys, threading, logging, json
 import socketserver
 
 
@@ -223,20 +223,17 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 
 	    # LISTENING LOOP
         while True:
-            try:
-                self.data_header_length = int(self.request.recv(HEADER_LENGTH).decode("utf-8"))
-                self.data = self.request.recv(self.data_header_length).decode("utf-8")
-                input_request = [self.client_address, self.data]
-                service_queue_semaphore.acquire()
-                service_queue.append(input_request)
-                service_queue_semaphore.release()
-                
-                # Logging
-                logging_semaphore.acquire()
-                log_data("Received: ", input_request)
-                logging_semaphore.release()
-            except KeyboardInterrupt:
-                break
+            self.data_header_length = int(self.request.recv(HEADER_LENGTH).decode("utf-8"))
+            self.data = self.request.recv(self.data_header_length).decode("utf-8")
+            input_request = [self.client_address, self.data]
+            service_queue_semaphore.acquire()
+            service_queue.append(input_request)
+            service_queue_semaphore.release()
+            
+            # Logging
+            logging_semaphore.acquire()
+            log_data("Received: ", input_request)
+            logging_semaphore.release()
  ############################################## END OF TCP THREAD ############################################
 
 
@@ -250,10 +247,11 @@ if __name__ == "__main__":
         # Activate the server; this will keep running until you
         # interrupt the program with Ctrl-C
             service_thread = ServiceThread()
+            service_thread.daemon = True
             service_thread.start()
             server.serve_forever()
     except KeyboardInterrupt:
         print("Server disconnected or terminated!")
-        sys.exit()
+        
 ################################################## END OF MAIN ################################################
     

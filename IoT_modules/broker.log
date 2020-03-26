@@ -1051,3 +1051,4 @@
 03/25/2020 08:32:23 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 55497], "{\"device\": \"management_app\", \"action\": \"ADD_NEW_USER\", \"user_info\": [\"Fil\", \"20\"]}"]}
 03/25/2020 08:32:24 PM - DEBUG: {"tag": "Received: ", "data": [["127.0.0.1", 55497], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"Fil\"]}"]}
 03/25/2020 08:32:24 PM - DEBUG: {"tag": "Service: ", "data": [["127.0.0.1", 55497], "{\"device\": \"management_app\", \"action\": \"DELETE_USER\", \"user_info\": [\"Fil\"]}"]}
+03/26/2020 08:13:10 AM - DEBUG: {"tag": "New Connection: ", "data": [["127.0.0.1", 51800], "{'device': 'thermometer_app', 'action': 'SYN_ACK', 'topics_of_interest': ['DOOR_STATUS', 'USER_MANAGEMENT'], 'device_socket': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9999), raddr=('127.0.0.1', 51800)>}"]}

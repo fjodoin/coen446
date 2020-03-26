@@ -177,6 +177,7 @@ class ThermometerApp(QDialog):
         self.changeStyle('Fusion')
 
         listening_thread = ListenThread(self.sock, self.temperatureDial, self.recentUser)
+        listening_thread.daemon = True
         listening_thread.start()
 
     def changeStyle(self, styleName):
