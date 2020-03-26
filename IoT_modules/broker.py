@@ -77,7 +77,8 @@ def broadcast_topic(device_data):
 
 def subscribe_device(topic_of_interest, service_input_dict):
     """
-    Subscribes a device (specified in service_input_dict) to a topic_of_interest; said device will now receive topic updates from said topic_of_interest
+    Subscribes a device (specified in service_input_dict) to a topic_of_interest; said device will now 
+    receive topic updates from said topic_of_interest
     :param topic_of_interest: string
     :param service_input_dict: dict
     :return:
@@ -89,6 +90,9 @@ def subscribe_device(topic_of_interest, service_input_dict):
 
 ############################################### SERVICE THREAD ###############################################
 class ServiceThread(threading.Thread):
+    """
+    This thread will service all pending requests by polling a serviice_queue list. FIFO queuing
+    """
     def __init__(self):
         threading.Thread.__init__(self)
     def run(self):
@@ -219,17 +223,20 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 
 	    # LISTENING LOOP
         while True:
-            self.data_header_length = int(self.request.recv(HEADER_LENGTH).decode("utf-8"))
-            self.data = self.request.recv(self.data_header_length).decode("utf-8")
-            input_request = [self.client_address, self.data]
-            service_queue_semaphore.acquire()
-            service_queue.append(input_request)
-            service_queue_semaphore.release()
-            
-            # Logging
-            logging_semaphore.acquire()
-            log_data("Received: ", input_request)
-            logging_semaphore.release()
+            try:
+                self.data_header_length = int(self.request.recv(HEADER_LENGTH).decode("utf-8"))
+                self.data = self.request.recv(self.data_header_length).decode("utf-8")
+                input_request = [self.client_address, self.data]
+                service_queue_semaphore.acquire()
+                service_queue.append(input_request)
+                service_queue_semaphore.release()
+                
+                # Logging
+                logging_semaphore.acquire()
+                log_data("Received: ", input_request)
+                logging_semaphore.release()
+            except KeyboardInterrupt:
+                break
  ############################################## END OF TCP THREAD ############################################
 
 
@@ -238,12 +245,15 @@ if __name__ == "__main__":
     HOST, PORT = "localhost", 9999
     # Create the server, binding to localhost on port 9999
     print("Broker launched [...]")
-    with socketserver.ThreadingTCPServer((HOST, PORT), MyTCPHandler) as server:
-    # Activate the server; this will keep running until you
-    # interrupt the program with Ctrl-C
-        service_thread = ServiceThread()
-        service_thread.start()
-        server.serve_forever()
-    print("Server disconnected or terminated!")
+    try:
+        with socketserver.ThreadingTCPServer((HOST, PORT), MyTCPHandler) as server:
+        # Activate the server; this will keep running until you
+        # interrupt the program with Ctrl-C
+            service_thread = ServiceThread()
+            service_thread.start()
+            server.serve_forever()
+    except KeyboardInterrupt:
+        print("Server disconnected or terminated!")
+        sys.exit()
 ################################################## END OF MAIN ################################################
     
