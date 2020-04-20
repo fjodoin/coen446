@@ -41,7 +41,7 @@ This project emulates a smart home ecosystem with 3 devices connected in a Publi
 5. Notice the temperature change automatically on the __thermometer_app__
 _All incoming and outgoing messages through the broker is being logged into broker.log_
 
-___### REBOOT WARNING___
+## ___REBOOT WARNING___
 When rebooting the project, you must follow the sequence below in order to avoid socket threading issues. (Known behaviour with serversocket module used in the broker.py module: https://stackoverflow.com/questions/6380057/python-binding-socket-address-already-in-use) 
 1. Close all IoT device GUI windows
 2. Terminate the Broker.py program by initiating a keyboard-interrupt (ctrl+c) in Terminal 1
