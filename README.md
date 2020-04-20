@@ -42,9 +42,22 @@ This project emulates a smart home ecosystem with 3 devices connected in a Publi
 _All incoming and outgoing messages through the broker is being logged into broker.log_
 
 ## ___REBOOT WARNING___
-When rebooting the project, you must follow the sequence below in order to avoid socket threading issues. (Known behaviour with serversocket module used in the broker.py module: https://stackoverflow.com/questions/6380057/python-binding-socket-address-already-in-use) 
-1. Close all IoT device GUI windows
+When rebooting the project, you must follow the sequence below in order to avoid socket threading issues. (Known behaviour with serversocket module used in the broker.py module: https://stackoverflow.com/questions/6380057/python-binding-socket-address-already-in-use). 
+1. Close __all__ IoT device GUI windows
 2. Terminate the Broker.py program by initiating a keyboard-interrupt (ctrl+c) in Terminal 1
 (_The command line should be returned immediately_)
 
 If you attempt to reboot and the terminal announces that sockets are already in use, double check that all IoT device windows are closed, wait 60 seconds and start from __Step 2__ in the __HOW TO LAUNCH PROJECT__ section above.
+
+## Assumptions
+- Management App
+    - Usernames must be unique.
+    - If users want to delete their information from the database, they need to highlight the username first and then click the delete button.
+- Smart Lock
+    - Only users who are already in the Management Application are considered valid inputs. If a guest enters their name into the smart lock username field and “enters”, the smart lock will greet the guest, but will not adjust the temperature.
+- Thermometer
+    - The timestamp when a user enters is taken when the DOOR_STATUS topic is received by the thermometer. This decision was made in order to relieve complexity from the smart lock device and reduce the size of messages being published. This will ultimately reduce the traffic on the network.
+    - Duplicate usernames are not verified; it is assumed that all tenants have a unique username.
+- MODULE / ECOSYSTEM  REBOOTING
+    - If the user would like to restart the ecosystem, it is required to shutdown and restart ALL modules (broker.py, thermometer_app.py, smart_lock_app.py, management_app.py). This is due to the MyTCPHandler having issues with reassigning ports; StackOverflow(https://stackoverflow.com/questions/51562067/connectionabortederror-winerror-10053-an-established-connection-was-aborted-b)
+
