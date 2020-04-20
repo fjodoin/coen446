@@ -45,6 +45,6 @@ _All incoming and outgoing messages through the broker is being logged into brok
 When rebooting the project, you must follow the sequence below in order to avoid socket threading issues. (Known behaviour with serversocket module used in the broker.py module: https://stackoverflow.com/questions/6380057/python-binding-socket-address-already-in-use) 
 1. Close all IoT device GUI windows
 2. Terminate the Broker.py program by initiating a keyboard-interrupt (ctrl+c) in Terminal 1
-_The commandline should be returned immediately_
+(_The command line should be returned immediately_)
 
 If you attempt to reboot and the terminal announces that sockets are already in use, double check that all IoT device windows are closed, wait 60 seconds and start from __Step 2__ in the __HOW TO LAUNCH PROJECT__ section above.
