@@ -1,5 +1,8 @@
 _COEN446, Concordia University, Winter 2020_
 # Internet of Things MQTT project
+![](img/coen446_diagram.png)
+
+
 _All commands are for Bash terminals_
 ## Installation
 1. Clone and Pull the project onto your machine via git
